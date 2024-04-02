@@ -1,0 +1,27 @@
+@mixin fluid-text($max: 48, $min: 16) {
+  font-size: clamp(#{$min}px, #{$max / 1440 * 100}vw, #{$max}px);
+}
+
+@mixin hover {
+  @media (hover: hover) {
+    &:hover {
+      @content;
+    }
+  }
+
+  @media (hover: none) {
+    &:hover {
+      @content;
+    }
+  }
+}
+
+@mixin grid($size) {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax($size, 1fr));
+}
+
+@mixin filter($size) {
+  backdrop-filter: blur($size);
+  -webkit-backdrop-filter: blur($size);
+}

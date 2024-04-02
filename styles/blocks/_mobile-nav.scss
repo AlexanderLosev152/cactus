@@ -1,0 +1,42 @@
+@include desctop-above {
+  .nav {
+    &__menu {
+      position: fixed;
+      top: 0;
+      right: -100%;
+      background-color: hsla(228, 24%, 6%, 0.2);
+      @include filter(16px);
+      width: 80%;
+      height: 100%;
+      padding: 6rem 3rem 0;
+      transition: right 0.4s;
+    }
+
+    &__list {
+      display: flex;
+      flex-direction: column;
+      row-gap: 3rem;
+    }
+
+    &__link {
+      color: var(--title-color);
+      font-weight: var(--font-semi-bold);
+      transition: color 0.4s;
+
+      &:hover {
+        color: var(--first-color);
+      }
+    }
+
+    &__close {
+      position: absolute;
+      top: 1.15rem;
+      right: 1.5rem;
+      font-size: 1.25rem;
+    }
+  }
+}
+
+.show-menu {
+  right: 0;
+}

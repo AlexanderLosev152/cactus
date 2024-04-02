@@ -1,0 +1,11 @@
+.blur-header::after {
+  content: '';
+  position: absolute;
+  width: 1000%;
+  height: 100%;
+  background-color: hsla(228, 24%, 6%, 0.2);
+  @include filter(16px);
+  top: 0;
+  left: 0;
+  z-index: -1;
+}
